@@ -1,12 +1,23 @@
 package com.embark.MyFirstSpringProject.job;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "job_table")
 public class Job {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String description;
     private String minSalary;
     private String maxSalary;
     private String location;
+
+    // default no argument constructor needed to instantiate object when taking from db
+    // allows for properties to be extracted and passed from db
+    public Job() {
+    }
 
     public Job(Long id, String title, String description, String minSalary, String maxSalary, String location) {
         this.id = id;
