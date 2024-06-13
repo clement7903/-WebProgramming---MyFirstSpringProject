@@ -1,6 +1,7 @@
 package com.embark.MyFirstSpringProject.company;
 
 import com.embark.MyFirstSpringProject.job.Job;
+import com.embark.MyFirstSpringProject.review.Review;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
@@ -19,9 +20,18 @@ public class Company {
     @OneToMany(mappedBy = "company") // a company is mapped by a field_name company in Job.java
     private List<Job> jobs;
 
-    // private List<Review> reviews;
+    @OneToMany(mappedBy = "company")
+     private List<Review> reviews;
 
     public Company() {
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 
     public Long getId() {

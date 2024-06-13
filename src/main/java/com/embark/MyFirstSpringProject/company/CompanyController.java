@@ -1,5 +1,6 @@
 package com.embark.MyFirstSpringProject.company;
 
+import com.embark.MyFirstSpringProject.job.Job;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -36,5 +37,23 @@ public class CompanyController {
         companyService.createCompany(company);
         return new ResponseEntity<>("Company added successfully",
                 HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteCompanyById(@PathVariable Long id){
+        boolean deleted = companyService.deleteCompanyById(id);
+        if (!deleted){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return ResponseEntity.ok("Company successfully deleted");
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Company> getCompanyById(@PathVariable Long id){
+        Company company = companyService.getCompanyById(id);
+        if(company!=null){
+            return new ResponseEntity<>(company, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }
