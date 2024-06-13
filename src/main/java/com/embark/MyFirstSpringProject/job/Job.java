@@ -1,5 +1,6 @@
 package com.embark.MyFirstSpringProject.job;
 
+import com.embark.MyFirstSpringProject.company.Company;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,9 +15,20 @@ public class Job {
     private String maxSalary;
     private String location;
 
+    @ManyToOne
+    private Company company; // many to one Company
+
     // default no argument constructor needed to instantiate object when taking from db
     // allows for properties to be extracted and passed from db
     public Job() {
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public Job(Long id, String title, String description, String minSalary, String maxSalary, String location) {
