@@ -1,7 +1,7 @@
 # -WebProgramming---MyFirstSpringProject
 
 ## Context:
-This is my first spring boot project for learning spring boot  
+This is my first spring boot project for learning spring boot. It is a monolithic application.  
 Referenced from: https://www.youtube.com/watch?v=BLlEgtp2_i8
 
 ## Setup Instructions
@@ -29,7 +29,7 @@ Referenced from: https://www.youtube.com/watch?v=BLlEgtp2_i8
 - For setting up Postgres container  
 `docker run -d --name db --network my-network -e POSTGRES_PASSWORD=<postgres password> postgres`
 
-- For setting up pgadmin container (will pull pgadmin4 image if not present in local device)
+- For setting up pgadmin container (will pull pgadmin4 image if not present in local device)  
 `docker run -d --name pgadmin --network my-network -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=<pg admin password> dpage/pgadmin4`
 
 - For testing the connection between pgadmin container & db container  
