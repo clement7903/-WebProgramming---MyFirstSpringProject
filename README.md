@@ -4,6 +4,9 @@
 This is my first spring boot project for learning spring boot. It is a monolithic application.  
 Referenced from: https://www.youtube.com/watch?v=BLlEgtp2_i8
 
+## Architecture Diagram
+![Architecture Diagram](Architecture Diagram.png)
+
 ## Setup Instructions
 
 ### Docker compose:
