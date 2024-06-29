@@ -5,6 +5,7 @@ This is my first spring boot project for learning spring boot. It is a monolithi
 Referenced from: https://www.youtube.com/watch?v=BLlEgtp2_i8
 
 ## Architecture Diagram
+
 ![Architecture Diagram](Architecture_Diagram.png)
 
 ## Setup Instructions
