@@ -16,7 +16,7 @@ Referenced from: https://www.youtube.com/watch?v=BLlEgtp2_i8
 
 ### Individual container setup:
 - For generating docker image for the using Maven  
-`./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=<image name>"`
+`./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=<docker username>/<image name>"`
 
 - For login into docker using access token  
 `docker login  -u <docker username> <docker access token>`
