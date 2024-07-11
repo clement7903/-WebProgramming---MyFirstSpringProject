@@ -15,8 +15,8 @@ Referenced from: https://www.youtube.com/watch?v=BLlEgtp2_i8
 `docker compose up -d`
 
 ### Individual container setup:
-- For generating docker image for the using Maven  
-`./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=<docker username>/<image name>"`
+- For generating docker image for the using Maven. Need to ensure postgres container is running, since there is reference to it.  
+```./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=<docker username>/<image name>"```
 
 - For login into docker using access token  
 `docker login  -u <docker username> <docker access token>`
